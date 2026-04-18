@@ -1,9 +1,9 @@
 'use client';
 
+import dynamic from 'next/dynamic';
 import { useMemo, useRef, useState } from 'react';
 import Papa from 'papaparse';
 import * as XLSX from 'xlsx';
-import Plot from 'react-plotly.js';
 import { toPng } from 'html-to-image';
 import jsPDF from 'jspdf';
 import {
@@ -18,6 +18,10 @@ import {
   unitBreakdownTable,
   zscore
 } from '@/lib/greenfeed';
+
+const Plot = dynamic(() => import('react-plotly.js'), {
+  ssr: false
+});
 
 const STEP_OPTIONS = [1, 2, 3, 4, 6, 8, 12, 24];
 const initialState = {

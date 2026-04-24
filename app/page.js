@@ -1563,26 +1563,6 @@ export default function Home() {
         </div>
 
         <div style={{ display: 'grid', gap: 20 }}>
-          {!result ? (
-            <div style={sectionCard}>
-              <h2 style={{ marginTop: 0 }}>What changed in this version</h2>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 14 }}>
-                <div>
-                  <div style={{ fontWeight: 700, marginBottom: 6 }}>Interactive filtering</div>
-                  <div style={{ color: '#64748b', lineHeight: 1.5 }}>Slice the matched dataset by unit, treatment, date window, and animal ID search after processing.</div>
-                </div>
-                <div>
-                  <div style={{ fontWeight: 700, marginBottom: 6 }}>Coverage review</div>
-                  <div style={{ color: '#64748b', lineHeight: 1.5 }}>See unmatched GreenFeed RFID rows so it is easier to audit MVH linkage gaps before exporting reports.</div>
-                </div>
-                <div>
-                  <div style={{ fontWeight: 700, marginBottom: 6 }}>More exports</div>
-                  <div style={{ color: '#64748b', lineHeight: 1.5 }}>Download daily summaries, unmatched rows, filtered merged data, unit summaries, and chart PDFs from the same run.</div>
-                </div>
-              </div>
-            </div>
-          ) : null}
-
           {result ? (
             <>
               <div style={sectionCard}>
